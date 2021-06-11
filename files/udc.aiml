@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category>
+	<pattern>HOLA</pattern>
+	<template>
+	    <image>https://portales.vilbo.com/files/uploads/images/Noticies/2019/09/franquicias-pan-port.jpg</image>
+		<random>
+			<li>Hola, somos Panaderia DDD, tenemos los mejores pasteles y al mejor precio
+		    Escribe una de las siguientes opciones:
+			1.Deseo informacion
+			2.Quiero pedir
+			</li>
+		
+		</random></template>
+</category>
+
+
+<category>
+
+	<pattern>DESEO INFORMACION</pattern>
+        <template>
+        	Para mas informacion, puedes visitar las siguientes paginas:
+        	<button>
+        	    <text>Facebook || Whatpasa</text>
+        	    <url>https://www.facebook.com/whatpasa8</url>    
+        	    
+        	</button>
+        	<button>
+        	    <text>Twitter || Whatpasa</text>
+        	    <url>https://www.twitter.com/whatpasa8</url>    
+        	    
+        	</button>
+        	
+        </template>
+</category>
+<category>
+	<pattern>QUIERO PEDIR </pattern>
+	<template>
+		<delay>1</delay>Esta bien, decide que ordenar:
+		<reply>
+		    <text>
+		        Promociones
+		    </text>
+		    <postback>Promociones</postback>
+		</reply>
+		<reply>
+		    <text>
+		        Pan
+		    </text>
+		    <postback>Pan</postback>
+		</reply>
+		<reply>
+		    <text>
+		        Pasteles
+		    </text>
+		    <postback>Pasteles</postback>
+		</reply>
+		</template>
+</category>
+
+<category>
+	<pattern>Promociones</pattern>
+	<template>
+	    Selecciono promociones...
+	    <carousel>
+	        <card>
+	            <title>Piqueo Dulce</title>
+	            <subtitle>S/. 49.90</subtitle>
+	            <image>https://cuponassets.cuponatic-latam.com/backendPe/uploads/imagenes_descuentos/56562/9a3be3daf7e028ef415c2fd869b07723f6fdd007.S.jpg</image>
+	            <button><text>Informacion</text>
+	            <url>https://www.cuponatic.com.pe/descuento/56562/sandwichs-tartaletas-y-mas-bocaditos-delivery</url>
+	            </button>
+	        </card>
+	        <card>
+	            <title>Solo Alfajor</title>
+	            <subtitle>S/. 20.00</subtitle>
+	            <image>https://cuponassets.cuponatic-latam.com/backendPe/uploads/imagenes_descuentos/89106/01e740460d395de9c7c581305706674c00539edc.XL2.jpg</image>
+	            <button><text>Informacion</text>
+	            <url>https://www.cuponatic.com.pe/descuento/89106/caja-con-100-alfajores-con-dulce-de-leche</url>
+	            </button>
+	        </card>
+	    </carousel>
+	</template>
+</category>
+<category>
+	<pattern>Pan</pattern>
+	<template>
+	    Selecciono pan...
+	    <carousel>
+	        <card>
+	            <title>Frances</title>
+	            <subtitle>4 panes x S/. 1</subtitle>
+	            <image>https://decomidaperuana.com/wp-content/uploads/2020/05/pan-frances.jpg</image>
+	            <button><text>Informacion</text>
+	            <url>https://www.cuponatic.com.pe/descuento/56562/sandwichs-tartaletas-y-mas-bocaditos-delivery</url>
+	            </button>
+	        </card>
+	        <card>
+	            <title>Baguete</title>
+	            <subtitle>4 panes x S/. 1</subtitle>
+	            <image>https://www.annarecetasfaciles.com/files/baguettes.jpg</image>
+	            <button><text>Informacion</text>
+	            <url>https://www.cuponatic.com.pe/descuento/89106/caja-con-100-alfajores-con-dulce-de-leche</url>
+	            </button>
+	        </card>
+	        <card>
+	            <title>Viena o hot dog</title>
+	            <subtitle>7 panes x S/. 1</subtitle>
+	            <image>https://img-global.cpcdn.com/recipes/004aa535bada060a/751x532cq70/pan-de-viena-hot-dog-foto-principal.jpg</image>
+	            <button><text>Informacion</text>
+	            <url>https://www.cuponatic.com.pe/descuento/89106/caja-con-100-alfajores-con-dulce-de-leche</url>
+	            </button>
+	        </card>	        
+	    </carousel>
+	</template>
+</category>
+
+<category>
+<pattern>CUAL ES LA FECHA DE HOY</pattern>
+
+<template>Hoy es <date format="%B %d, %Y" /></template>
+</category>	 
+
+
+
+
+
+
+</aiml>
